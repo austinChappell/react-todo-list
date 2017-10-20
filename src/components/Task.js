@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 
 class Task extends Component {
   render() {
+
+    const spanStyle = {
+      textDecoration: this.props.todo.done ? 'line-through' : 'none'
+    }
+
     return (
       <div className="Task">
-        <span style={{
-          textDecoration: this.props.todo.done ? 'line-through' : 'none' }}>
+        <span style={spanStyle}>
           {this.props.todo.value}
         </span>
         <button
